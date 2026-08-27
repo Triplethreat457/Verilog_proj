@@ -16,7 +16,23 @@ module testbench;
   endtask
   
   alu dut(.a(a), .b(b), .result(result), .zero(zero), .alu_op(alu_op));
-  
+
+  initial begin 
+    //Add Test
+    $dumpfile("dump.vcd");
+    $dumpvars(0,testbench);
+    a = 32'd1;
+    b = 32'd5;
+    alu_op = 4'b0;
+    $display("-----------------ADD TEST------------------");
+    $display("Setted,d1\n ");
+
+
+
+
+
+  end
+
   
   
  
