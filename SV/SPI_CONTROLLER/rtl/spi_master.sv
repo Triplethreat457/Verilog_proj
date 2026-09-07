@@ -1,14 +1,14 @@
-module spi_master(
+module spi_master #(parameter int width = 8)(
   
   // General System Inputs
   input logic clk,
   input logic rst_n,
-  input logic [7:0] tx_data,
+  input logic [width-1:0] tx_data,
   input logic start,
   
   // General System Outputs
   output logic done,
-  output logic [7:0] rx_data,
+  output logic [width-1:0] rx_data,
   output logic ready,
   
   // Communication to SLAVE from MASTER
