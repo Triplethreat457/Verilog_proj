@@ -1,4 +1,4 @@
-module sycronizer #(parameter int RESET_VAL = 1'b0)( // 2-Stage syncronizer to handle cs_n, mosi, and miso
+module syncronizer #(parameter int RESET_VAL = 1'b0)( // 2-Stage syncronizer to handle cs_n, mosi, and miso
     input logic clk,
     input logic data_in,
     input logic rst_n,
