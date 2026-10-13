@@ -23,8 +23,7 @@ always_ff @(posedge clk or negedge rst_n) begin
         
     end
     else edge_count <= 'd0; // enable = 0 (IDLE STATE)
-
-    
+ 
 end
 
 

@@ -7,7 +7,7 @@ module spi_master #(
   input  logic             clk,       // Primary system clock
   input  logic             rst_n,     // Active-low asynchronous reset
   input  logic [width-1:0] tx_data,   // Parallel data payload to transmit
-  input  logic             start,     // Pulse HIGH for 1 cycle to begin transfer
+  input  logic             start,     // Pulse HIGH for 1 cycle to begin transfer (if on goes out of IDLE state)
   
   // Handshake & RX Outputs
   output logic             done,      // Pulses HIGH for 1 cycle upon transfer completion
